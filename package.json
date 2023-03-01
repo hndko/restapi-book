@@ -21,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/hndko/restapi-book/issues"
   },
-  "homepage": "https://github.com/hndko/restapi-book#readme"
+  "homepage": "https://github.com/hndko/restapi-book#readme",
+  "dependencies": {
+    "body-parse": "^0.1.0",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  }
 }
