@@ -6,4 +6,5 @@ module.exports = function(app){
     app.route('/').get(jsonbook.index);
     app.route('/show-book').get(jsonbook.tampilData);
     app.route('/show-book/:id').get(jsonbook.tampilDataByID);
+    app.route('/create').post(jsonbook.tambahData);
 }
