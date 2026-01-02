@@ -1,7 +1,5 @@
 "use strict";
 
-const { end } = require("./koneksi");
-
 exports.ok = function (values, res) {
   var data = {
     status: 200,

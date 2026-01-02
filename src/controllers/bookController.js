@@ -1,8 +1,7 @@
 "use strict";
 
-var response = require("./res");
-var connection = require("./koneksi");
-const { connect } = require("./koneksi");
+const response = require("../utils/response");
+const connection = require("../config/database");
 
 exports.index = function (req, res) {
   response.ok("Aplikasi REST API Book Berjalan", res);
@@ -36,10 +35,7 @@ exports.tampilDataByID = function (req, res) {
 };
 
 exports.tambahData = function (req, res) {
-  var judul = req.body.judul;
-  var pengarang = req.body.pengarang;
-  var penerbit = req.body.penerbit;
-  var tahun_terbit = req.body.tahun_terbit;
+  const { judul, pengarang, penerbit, tahun_terbit } = req.body;
 
   connection.query(
     "INSERT INTO `tb_buku`(`judul`, `pengarang`, `penerbit`, `tahun_terbit`) VALUES (?,?,?,?)",
@@ -55,11 +51,7 @@ exports.tambahData = function (req, res) {
 };
 
 exports.ubahData = function (req, res) {
-  var id = req.body.id;
-  var judul = req.body.judul;
-  var pengarang = req.body.pengarang;
-  var penerbit = req.body.penerbit;
-  var tahun_terbit = req.body.tahun_terbit;
+  const { id, judul, pengarang, penerbit, tahun_terbit } = req.body;
 
   connection.query(
     "UPDATE `tb_buku` SET `judul`=?,`pengarang`=?,`penerbit`=?,`tahun_terbit`=? WHERE `id`=?",
@@ -75,7 +67,7 @@ exports.ubahData = function (req, res) {
 };
 
 exports.deleteData = function (req, res) {
-  var id = req.body.id;
+  const { id } = req.body;
 
   connection.query(
     "DELETE FROM `tb_buku` WHERE `id`=?",

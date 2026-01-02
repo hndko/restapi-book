@@ -1,0 +1,129 @@
+{
+  "info": {
+    "_postman_id": "b574936d-09c5-4089-9ba7-142861595186",
+    "name": "REST API Book",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Index",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9000/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9000",
+          "path": [""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Books",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9000/show-book",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9000",
+          "path": ["show-book"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Book By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9000/show-book/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9000",
+          "path": ["show-book", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Book",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"judul\": \"Buku Baru\",\n    \"pengarang\": \"Pengarang Baru\",\n    \"penerbit\": \"Penerbit Baru\",\n    \"tahun_terbit\": \"2023\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:9000/create-book",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9000",
+          "path": ["create-book"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Book",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"id\": 1,\n    \"judul\": \"Buku Update\",\n    \"pengarang\": \"Pengarang Update\",\n    \"penerbit\": \"Penerbit Update\",\n    \"tahun_terbit\": \"2024\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:9000/edit-book",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9000",
+          "path": ["edit-book"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Book",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"id\": 1\n}"
+        },
+        "url": {
+          "raw": "http://localhost:9000/delete-book",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9000",
+          "path": ["delete-book"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
