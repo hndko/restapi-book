@@ -1,86 +1,86 @@
-# 📚 REST API Book Management
+# 📚 REST API Manajemen Buku
 
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
 ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 
-> A robust and modular RESTful API built with Node.js and Express for managing a book inventory system efficiently.
+> API RESTful yang modular dan tangguh dibangun dengan Node.js dan Express untuk sistem manajemen inventaris buku secara efisien.
 
 ---
 
-## 🚀 Overview
+## 🚀 Ringkasan
 
-This project is a backend application designed to demonstrate a clean and scalable architecture (MVC) for building REST APIs. It provides comprehensive endpoints for managing book records, including adding, updating, deleting, and retrieving book data.
+Proyek ini adalah aplikasi backend yang dirancang untuk mendemonstrasikan arsitektur yang bersih dan terukur (MVC) untuk membangun REST API. Aplikasi ini menyediakan endpoint lengkap untuk mengelola data buku, termasuk menambah, memperbarui, menghapus, dan mengambil data buku.
 
-It serves as a perfect starter kit or reference for:
+Proyek ini cocok sebagai starter kit atau referensi untuk:
 
-- Learning **Node.js** & **Express**
-- Understanding **MVC Architecture** in backend development
-- Implementing **MySQL** interactions
-- Structuring a production-ready API
+- Belajar **Node.js** & **Express**
+- Memahami **Arsitektur MVC** dalam pengembangan backend
+- Mengimplementasikan interaksi **MySQL**
+- Menyusun API siap produksi
 
-## ✨ Key Features
+## ✨ Fitur Utama
 
-- **CRUD Operations**: Full Create, Read, Update, Delete capabilities for book data.
-- **Modular Architecture**: Codebase separated into Routes, Controllers, Config, and Utils for better maintainability.
-- **Environment Configuration**: Secure management of credentials using `.env`.
-- **Standardized Responses**: Consistent JSON response structure across all endpoints.
-- **Postman Collection**: Ready-to-use API documentation for testing.
+- **Operasi CRUD**: Kemampuan Create, Read, Update, Delete lengkap untuk data buku.
+- **Arsitektur Modular**: Kode dipisahkan menjadi Routes, Controller, Config, dan Utils untuk pemeliharaan yang lebih baik.
+- **Konfigurasi Lingkungan**: Pengelolaan kredensial yang aman menggunakan `.env`.
+- **Respons Terstandarisasi**: Struktur respons JSON yang konsisten di seluruh endpoint.
+- **Koleksi Postman**: Dokumentasi API siap pakai untuk pengujian.
 
-## 🛠️ Tech Stack
+## 🛠️ Teknologi yang Digunakan
 
 - **Runtime Environment**: [Node.js](https://nodejs.org/)
 - **Framework**: [Express.js](https://expressjs.com/)
 - **Database**: [MySQL](https://www.mysql.com/)
 - **Dependencies**: `body-parser`, `dotenv`, `mysql`
 
-## 📂 Project Structure
+## 📂 Struktur Proyek
 
 ```text
 restapi-book/
-├── docs/               # Documentation assets
+├── docs/               # Aset dokumentasi
 │   └── postman_collection.json
 ├── src/
-│   ├── config/         # Database connection setup
-│   ├── controllers/    # Business logic & request handling
-│   ├── routes/         # API endpoint definitions
-│   ├── utils/          # Helper functions (response formatting)
-│   └── app.js          # Application entry point
-├── .env                # Environment variables
+│   ├── config/         # Konfigurasi koneksi database
+│   ├── controllers/    # Logika bisnis & penanganan request
+│   ├── routes/         # Definisi endpoint API
+│   ├── utils/          # Fungsi pembantu (format respons)
+│   └── app.js          # Titik masuk aplikasi
+├── .env                # Variabel lingkungan
 └── package.json
 ```
 
-## 🏁 Getting Started
+## 🏁 Mulai
 
-Follow these steps to set up the project locally.
+Ikuti langkah-langkah ini untuk menjalankan proyek secara lokal.
 
-### Prerequisites
+### Prasyarat
 
-- Node.js (v14 or higher)
-- MySQL Server installed and running
+- Node.js (v14 atau lebih tinggi)
+- Server MySQL terinstal dan berjalan
 
-### Installation
+### Instalasi
 
-1.  **Clone the repository**
+1.  **Clone repositori**
 
     ```bash
     git clone https://github.com/hndko/restapi-book.git
     cd restapi-book
     ```
 
-2.  **Install dependencies**
+2.  **Instal dependensi**
 
     ```bash
     npm install
     ```
 
-3.  **Configure Environment**
+3.  **Konfigurasi Lingkungan**
 
-    - Copy the example environment file:
+    - Salin file contoh lingkungan:
       ```bash
       cp .env.example .env
       ```
-    - Open `.env` and fill in your MySQL credentials:
+    - Buka `.env` dan isi kredensial MySQL Anda:
       ```env
       PORT=9000
       DB_HOST=localhost
@@ -91,30 +91,30 @@ Follow these steps to set up the project locally.
 
 4.  **Setup Database**
 
-    - Create a database named `db_restapi`.
-    - Create the `tb_buku` table with columns: `id`, `judul`, `pengarang`, `penerbit`, `tahun_terbit`.
+    - Buat database bernama `db_restapi`.
+    - Buat tabel `tb_buku` dengan kolom: `id`, `judul`, `pengarang`, `penerbit`, `tahun_terbit`.
 
-5.  **Run the Server**
+5.  **Jalankan Server**
     ```bash
     npm start
     ```
-    Server will start on `http://localhost:9000`.
+    Server akan berjalan di `http://localhost:9000`.
 
-## 📖 API Documentation
+## 📖 Dokumentasi API
 
-The full API documentation is available via a Postman Collection.
+Dokumentasi API lengkap tersedia melalui Koleksi Postman.
 
-1.  **Open Postman**.
-2.  **Import** the file located at `docs/postman_collection.json`.
-3.  You will see all endpoints ready to test:
-    - `GET /` - Check API Status
-    - `GET /show-book` - Get all books
-    - `GET /show-book/:id` - Get specific book
-    - `POST /create-book` - Add a new book
-    - `PUT /edit-book` - Update a book
-    - `DELETE /delete-book` - Delete a book
+1.  **Buka Postman**.
+2.  **Impor** file yang terletak di `docs/postman_collection.json`.
+3.  Anda akan melihat semua endpoint siap untuk diuji:
+    - `GET /` - Cek Status API
+    - `GET /show-book` - Ambil semua buku
+    - `GET /show-book/:id` - Ambil buku spesifik
+    - `POST /create-book` - Tambah buku baru
+    - `PUT /edit-book` - Perbarui buku
+    - `DELETE /delete-book` - Hapus buku
 
-## 👨‍💻 Author
+## 👨‍💻 Pembuat
 
 **Handoko**
 
@@ -122,4 +122,4 @@ The full API documentation is available via a Postman Collection.
 
 ---
 
-_Made with ❤️ using Node.js_
+_Dibuat dengan ❤️ menggunakan Node.js_
